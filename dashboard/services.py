@@ -1,4 +1,4 @@
-from monitoring.models import MonitoringEvent
+from monitoring.models import MonitoringData
 
 
 def get_filtered_occurrences(day=0, month=0, year=0):
@@ -12,4 +12,4 @@ def get_filtered_occurrences(day=0, month=0, year=0):
         filters["date__day"] = day
 
     # Retornar as ocorrências ordenadas por data
-    return MonitoringEvent.objects.filter(**filters).order_by("date")
+    return MonitoringData.objects.filter(**filters).order_by("date")

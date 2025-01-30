@@ -1,12 +1,12 @@
 from rest_framework import serializers
-from monitoring.models import MonitoringEvent
+from monitoring.models import MonitoringData
 
 
 class DashboardSerializer(serializers.ModelSerializer):
     evidence_url = serializers.SerializerMethodField()
 
     class Meta:
-        model = MonitoringEvent
+        model = MonitoringData
         fields = ["mac", "object_class", "date", "evidence_url"]
 
     def get_evidence_url(self, obj):
