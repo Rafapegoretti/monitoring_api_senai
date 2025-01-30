@@ -79,7 +79,7 @@ DATABASES = {
         "NAME": "mouse_recognition",
         "USER": os.environ["USER"],
         "PASSWORD": os.environ["PASSWORD"],
-        "HOST": "localhost",
+        "HOST": "db",
         "PORT": "5432",
     }
 }
